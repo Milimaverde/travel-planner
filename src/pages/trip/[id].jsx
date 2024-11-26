@@ -3,14 +3,18 @@ import { useRouter } from 'next/router';
 import Itinerary from '../../components/Itinerary';
 import Expenses from '../../components/Expenses';
 import Tasks from '../../components/Tasks';
+import { useContext } from 'react';
+import TripContext from '../../context/TripContext';
 
 export default function TripPage() {
   const router = useRouter();
   const { id } = router.query;
+  const { trip } = useContext(TripContext);
+
 
   return (
     <div style={{ padding: '20px' }}>
-      <h1>Detalhes da Viagem: {id}</h1>
+      <h1>Detalhes da Viagem: {trip.find((trip) => trip.id === Number(id)).name}</h1>
       <nav style={{ marginBottom: '20px' }}>
         <a href="#itinerary" style={{ margin: '0 10px' }}>Itinerário</a>
         <a href="#expenses" style={{ margin: '0 10px' }}>Despesas</a>
