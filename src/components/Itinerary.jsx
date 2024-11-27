@@ -1,7 +1,7 @@
 // components/Itinerary.js
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css'; // Importa o estilo padrão
+import { Calendar } from "@nextui-org/react";
+
 
 export default function Itinerary() {
   const [selectedDate, setSelectedDate] = useState(new Date());
