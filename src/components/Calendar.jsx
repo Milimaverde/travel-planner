@@ -1,7 +1,6 @@
 // components/Calendar.js
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
-import { Calendar } from "@nextui-org/react";
 
 import './CalendarStyles.css';
 

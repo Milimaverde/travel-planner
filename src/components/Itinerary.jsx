@@ -1,6 +1,6 @@
 // components/Itinerary.js
 import React, { useState } from 'react';
-import { Calendar } from "@nextui-org/react";
+import Calendar from 'react-calendar';
 
 
 export default function Itinerary() {
